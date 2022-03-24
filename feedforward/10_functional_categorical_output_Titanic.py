@@ -6,11 +6,11 @@ Created on Thu Mar 24 17:47:28 2022
 """
 from sklearn.model_selection import train_test_split
 from sklearn import preprocessing, impute
-import pandas as pd
-import numpy as np
 import sklearn
-import tensorflow as tf
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import tensorflow as tf
 
 # STEP 1: Load Dataset
 train = pd.read_csv(r"C:\Users\Sarah\90min\Python\AI05\dl\datasets\titanic\train.csv")
