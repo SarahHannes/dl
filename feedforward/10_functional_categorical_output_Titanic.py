@@ -89,8 +89,6 @@ X_test = standardizer2.transform(X_test)
 #%%
 # STEP 3: Prepare Model
 inputs = tf.keras.Input(shape=(X_train.shape[-1],))
-# dense = tf.keras.layers.Dense(32, activation='relu')
-# x = dense(inputs)
 dense = tf.keras.layers.Dense(16, activation='relu')
 x = dense(inputs)
 outputs = tf.keras.layers.Dense(2, activation='softmax')(x)
