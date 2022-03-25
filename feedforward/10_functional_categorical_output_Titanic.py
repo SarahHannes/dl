@@ -13,8 +13,8 @@ import pandas as pd
 import tensorflow as tf
 
 # STEP 1: Load Dataset
-train = pd.read_csv(r"C:\Users\Sarah\90min\Python\AI05\dl\datasets\titanic\train.csv")
-test = pd.read_csv(r"C:\Users\Sarah\90min\Python\AI05\dl\datasets\titanic\test.csv") 
+train = pd.read_csv("https://raw.githubusercontent.com/SarahHannes/dl/main/feedforward/data/titanic/train.csv")
+test = pd.read_csv("https://raw.githubusercontent.com/SarahHannes/dl/main/feedforward/data/titanic/test.csv") 
 
 #%%
 # STEP 2: Prepare Dataset
