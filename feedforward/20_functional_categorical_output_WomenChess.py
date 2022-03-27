@@ -14,7 +14,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 
 # STEP 1: Load Dataset
-df = pd.read_csv(r"C:\Users\Sarah\Desktop\women_chess\top_women_chess_players_aug_2020.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/SarahHannes/dl/main/feedforward/data/women_chess/top_women_chess_players_aug_2020.csv")
 
 #%%
 # STEP 2: Prepare Dataset
