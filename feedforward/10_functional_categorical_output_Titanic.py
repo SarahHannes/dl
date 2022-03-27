@@ -6,15 +6,15 @@ Created on Thu Mar 24 17:47:28 2022
 """
 from sklearn.model_selection import train_test_split
 from sklearn import preprocessing, impute
-import sklearn
-import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
+import numpy as np
+import sklearn
 import tensorflow as tf
+import matplotlib.pyplot as plt
 
 # STEP 1: Load Dataset
-train = pd.read_csv("https://raw.githubusercontent.com/SarahHannes/dl/main/feedforward/data/titanic/train.csv")
-test = pd.read_csv("https://raw.githubusercontent.com/SarahHannes/dl/main/feedforward/data/titanic/test.csv") 
+train = pd.read_csv(r"C:\Users\Sarah\90min\Python\AI05\dl\datasets\titanic\train.csv")
+test = pd.read_csv(r"C:\Users\Sarah\90min\Python\AI05\dl\datasets\titanic\test.csv") 
 
 #%%
 # STEP 2: Prepare Dataset
@@ -89,6 +89,8 @@ X_test = standardizer2.transform(X_test)
 #%%
 # STEP 3: Prepare Model
 inputs = tf.keras.Input(shape=(X_train.shape[-1],))
+# dense = tf.keras.layers.Dense(32, activation='relu')
+# x = dense(inputs)
 dense = tf.keras.layers.Dense(16, activation='relu')
 x = dense(inputs)
 outputs = tf.keras.layers.Dense(2, activation='softmax')(x)
