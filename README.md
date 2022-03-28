@@ -18,18 +18,41 @@ Feed Forward Neural Network
 <img src="feedforward/plots/20_loss.png" width="345"> <img src="feedforward/plots/20_accuracy.png" width="345">
 
 #### 3.0 German Credit Dataset: Overfitted Model <a href="feedforward/30_functional_categorical_output_GermanCredit.py">[Code]</a>
+> Learning goal: 
+> 1. Prepare data and NN model is such a way that it will prone to overfit.
+> 	 - One hot encoding all categorical columns to increase the number of feature columns.
+> 	 - Increase model complexity (more dense layer, more nodes in each layers).
+> 	 - Train with high epochs.
 ```
-Learning goal:
-    (1) Prepare data and NN model is such a way that it will prone to overfit.
-        - One hot encoding all categorical columns to increase the number of feature columns.
-        - Increase model complexity (more dense layer, more nodes in each layers)
-        - Train with high epochs
+Model: "german_credit_model_overfit"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 61)]              0         
+                                                                 
+ dense (Dense)               (None, 64)                3968      
+                                                                 
+ dense_1 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_2 (Dense)             (None, 16)                528       
+                                                                 
+ dense_3 (Dense)             (None, 8)                 136       
+                                                                 
+ dense_4 (Dense)             (None, 2)                 18        
+                                                                 
+=================================================================
+Total params: 6,730
+Trainable params: 6,730
+Non-trainable params: 0
+_________________________________________________________________
 ```
 <img src="feedforward/plots/30_loss.png" width="340"> <img src="feedforward/plots/30_accuracy.png" width="345">
 
 #### 4.0 German Credit Dataset: Generalized Model <a href="feedforward/40_functional_categorical_output_GermanCredit.py">[Code]</a>
+> Learning goal:
+> 
+> 2.  Reduce overfitting in the previous model.
+>     -   Reduce model complexity.
 ```
-Learning goal:
-    (2) Reduce overfitting in the previous model.
 ```
 <img src="feedforward/plots/40_loss.png" width="345"> <img src="feedforward/plots/40_accuracy.png" width="345">
