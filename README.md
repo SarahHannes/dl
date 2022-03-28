@@ -5,7 +5,7 @@
     + [1.0 Titanic Dataset](https://github.com/SarahHannes/dl/blob/main/README.md#10-titanic-dataset-code)
     + [2.0 Women Chess Dataset](https://github.com/SarahHannes/dl/blob/main/README.md#20-women-chess-dataset-code)
     + [3.0 German Credit Dataset: Overfitted Model](https://github.com/SarahHannes/dl/blob/main/README.md#30-german-credit-dataset-overfitted-model-code)
-    + [4.0 German Credit Dataset: Generalized Model](https://github.com/SarahHannes/dl/blob/main/README.md#30-german-credit-dataset-generalized-model-code)
+    + [4.0 German Credit Dataset: Generalized Model](https://github.com/SarahHannes/dl/blob/main/README.md#40-german-credit-dataset-generalized-model-code)
 
 <!-- toc -->
 Feed Forward Neural Network
