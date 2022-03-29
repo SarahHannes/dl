@@ -57,3 +57,46 @@ _________________________________________________________________
 ```
 <img src="feedforward/plots/40_loss.png" width="345"> <img src="feedforward/plots/40_accuracy.png" width="345">
  -->
+ Convolutional Neural Network
+------------
+ #### 1.0 CIFAR10<a href="cnn/10_cifar10.ipynb"> [Code]</a>
+```
+Model: "Model4b"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_12 (Conv2D)          (None, 32, 32, 64)        1792      
+                                                                 
+ conv2d_13 (Conv2D)          (None, 32, 32, 64)        36928     
+                                                                 
+ max_pooling2d_7 (MaxPooling  (None, 16, 16, 64)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_14 (Conv2D)          (None, 16, 16, 32)        18464     
+                                                                 
+ conv2d_15 (Conv2D)          (None, 16, 16, 32)        9248      
+                                                                 
+ max_pooling2d_8 (MaxPooling  (None, 8, 8, 32)         0         
+ 2D)                                                             
+                                                                 
+ conv2d_16 (Conv2D)          (None, 8, 8, 16)          4624      
+                                                                 
+ conv2d_17 (Conv2D)          (None, 8, 8, 16)          2320      
+                                                                 
+ max_pooling2d_9 (MaxPooling  (None, 4, 4, 16)         0         
+ 2D)                                                             
+                                                                 
+ flatten_3 (Flatten)         (None, 256)               0         
+                                                                 
+ dense_9 (Dense)             (None, 32)                8224      
+                                                                 
+ dropout (Dropout)           (None, 32)                0         
+                                                                 
+ dense_10 (Dense)            (None, 10)                330       
+                                                                 
+=================================================================
+Total params: 81,930
+Trainable params: 81,930
+Non-trainable params: 0
+_________________________________________________________________
+```
