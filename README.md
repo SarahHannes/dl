@@ -11,13 +11,13 @@
 Feed Forward Neural Network
 ------------
 ### Categorical
-#### 1.0 Titanic Dataset <a href="feedforward/10_functional_categorical_output_Titanic.py">[Code]</a>
+#### 1.0 Titanic Dataset <a href="feedforward/10_categorical_Titanic.py">[Code]</a>
 <img src="feedforward/plots/10_loss.png" width="350"> <img src="feedforward/plots/10_accuracy.png" width="345">
 
-#### 2.0 Women Chess Dataset <a href="feedforward/20_functional_categorical_output_WomenChess.py">[Code]</a>
+#### 2.0 Women Chess Dataset <a href="feedforward/20_categorical_WomenChess.py">[Code]</a>
 <img src="feedforward/plots/20_loss.png" width="345"> <img src="feedforward/plots/20_accuracy.png" width="345">
 
-#### 3.0 German Credit Dataset: Overfitted Model <a href="feedforward/30_functional_categorical_output_GermanCredit.py">[Code]</a>
+#### 3.0 German Credit Dataset: Overfitted Model <a href="feedforward/30_categorical_GermanCredit.py">[Code]</a>
 > Learning goal: 
 > 1. Prepare data and NN model is such a way that it will prone to overfit.
 > 	 - One hot encoding all categorical columns to increase the number of feature columns.
@@ -47,8 +47,8 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 <img src="feedforward/plots/30_loss.png" width="340"> <img src="feedforward/plots/30_accuracy.png" width="345">
-
-#### 4.0 German Credit Dataset: Generalized Model <a href="feedforward/40_functional_categorical_output_GermanCredit.py">[Code]</a>
+<!-- 
+#### 4.0 German Credit Dataset: Generalized Model <a href="feedforward/40_functional_categorical_GermanCredit.py">[Code]</a>
 > Learning goal:
 > 
 > 2.  Reduce overfitting in the previous model.
@@ -56,3 +56,4 @@ _________________________________________________________________
 ```
 ```
 <img src="feedforward/plots/40_loss.png" width="345"> <img src="feedforward/plots/40_accuracy.png" width="345">
+ -->
