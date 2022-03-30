@@ -108,5 +108,60 @@ _________________________________________________________________
 > Learning goal:
 > 
 > Create, load dataset and build CNN model for "good" and "moldy" bread image classification.
+> - 300 images for each class were bulk downloaded using <a href="http://https://chrome.google.com/webstore/detail/image-downloader-imageye/agionbommeaifngbhincahgmoflcikhm?hl=en"> <i>imageye</i> </a>Google Chrome extension.
+> - Three baseline models were built with the following architecture:
+>   - Model 1: Input + Batch Normalization Layer + 3 Convolutional Layers + 1 Dense Layer
+>   - Model 2: Input + Batch Normalization Layer + 4 Convolutional Layers + 1 Dense Layer
+>  	- Model 3: Input + Batch Normalization Layer + 5 Convolutional Layers + 1 Dense Layer
+> - All models were trained for 10 epochs.
+> - Best accuracy score (83%) is obtained by Model 3.
+> - Model 3 summary is as below.
 
-<img src="https://user-images.githubusercontent.com/78901374/160868266-3855f094-db24-4f05-92f2-abf434ef1ab8.png" width="350" height="350">
+<img src="https://user-images.githubusercontent.com/78901374/160882501-962fa9ac-7fb1-453b-bda9-499254e17f82.png" width="500" height="150">
+
+```
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ batch_normalization_2 (Batc  (None, 180, 180, 3)      12        
+ hNormalization)                                                 
+                                                                 
+ conv2d_7 (Conv2D)           (None, 178, 178, 128)     3584      
+                                                                 
+ max_pooling2d_7 (MaxPooling  (None, 89, 89, 128)      0         
+ 2D)                                                             
+                                                                 
+ conv2d_8 (Conv2D)           (None, 87, 87, 64)        73792     
+                                                                 
+ max_pooling2d_8 (MaxPooling  (None, 43, 43, 64)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_9 (Conv2D)           (None, 41, 41, 32)        18464     
+                                                                 
+ max_pooling2d_9 (MaxPooling  (None, 20, 20, 32)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_10 (Conv2D)          (None, 18, 18, 16)        4624      
+                                                                 
+ max_pooling2d_10 (MaxPoolin  (None, 9, 9, 16)         0         
+ g2D)                                                            
+                                                                 
+ conv2d_11 (Conv2D)          (None, 7, 7, 8)           1160      
+                                                                 
+ max_pooling2d_11 (MaxPoolin  (None, 3, 3, 8)          0         
+ g2D)                                                            
+                                                                 
+ flatten_2 (Flatten)         (None, 72)                0         
+                                                                 
+ dense_4 (Dense)             (None, 8)                 584       
+                                                                 
+ dense_5 (Dense)             (None, 2)                 18        
+                                                                 
+=================================================================
+Total params: 102,238
+Trainable params: 102,232
+Non-trainable params: 6
+_________________________________________________________________
+```
+<!-- <img src="cnn/plots/30_loss.png" width="340"> <img src="feedforward/plots/30_accuracy.png" width="345"> -->
