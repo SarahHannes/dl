@@ -8,6 +8,7 @@
     + [4.0 German Credit Dataset: Generalized Model](https://github.com/SarahHannes/dl#40-german-credit-dataset-generalized-model-code)
 - [Convolutional Neural Network](https://github.com/SarahHannes/dl#convolutional-neural-network)
   * [1.0 CIFAR10](https://github.com/SarahHannes/dl#10-cifar10-code)
+  * [2.0 Bread](https://github.com/SarahHannes/dl#20-bread-code)
 
 <!-- toc -->
 Feed Forward Neural Network
@@ -61,7 +62,7 @@ _________________________________________________________________
  -->
  Convolutional Neural Network
 ------------
- #### 1.0 CIFAR10<a href="cnn/10_cifar10.ipynb"> [Code]</a>
+ #### 1.0 CIFAR10 <a href="cnn/10_cifar10.ipynb"> [Code]</a>
 ```
 Model: "Model4"
 _________________________________________________________________
@@ -102,3 +103,10 @@ Trainable params: 81,930
 Non-trainable params: 0
 _________________________________________________________________
 ```
+
+ #### 2.0 Bread <a href="cnn/20_bread.ipynb"> [Code]</a>
+> Learning goal:
+> 
+> Create, load dataset and build CNN model for "good" and "moldy" bread image classification.
+
+<img src="https://user-images.githubusercontent.com/78901374/160748653-0f4d062f-1be3-4812-a9ee-584809234080.png" width="350" height="350">
