@@ -109,4 +109,4 @@ _________________________________________________________________
 > 
 > Create, load dataset and build CNN model for "good" and "moldy" bread image classification.
 
-<img src="https://user-images.githubusercontent.com/78901374/160748653-0f4d062f-1be3-4812-a9ee-584809234080.png" width="350" height="350">
+<img src="https://user-images.githubusercontent.com/78901374/160868266-3855f094-db24-4f05-92f2-abf434ef1ab8.png" width="350" height="350">
