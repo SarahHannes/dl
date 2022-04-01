@@ -164,4 +164,5 @@ Trainable params: 102,232
 Non-trainable params: 6
 _________________________________________________________________
 ```
-<!-- <img src="cnn/plots/30_loss.png" width="340"> <img src="feedforward/plots/30_accuracy.png" width="345"> -->
+<img src="cnn/plots/20_loss.png" width="1200">
+<img src="cnn/plots/20_accuracy.png" width="1200">
