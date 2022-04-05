@@ -182,6 +182,8 @@ Transfer Learning
 > - Final validation accuracy during initial training: 0.8842; validation accuracy during fine tuning: 0.8924.
 > - Test accuracy: 0.9196.
 > - Model summary is as below.
+> - Possible improvement: 
+>   - Add more data augmentation layer for image preprocessing (eg image cropping, resizing, zoom) since the model would most likely perform incorrect prediction on images of animal that are further away in the background.
 
 ```
 Model: "model_4"
