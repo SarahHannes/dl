@@ -56,8 +56,7 @@ st.markdown(f""" <style>
 
 st.markdown("<h1 style='text-align: center; color: grey;'>To eat or not to eat... 🍞 🥐 🥖</h1>", unsafe_allow_html=True)
 uploaded_file = st.file_uploader("Upload image to start!", type='jpg')
-image_url = st.text_input("or.. enter image URL")
-st.info("To get image URL: right click on any image -> select `Open image in a new tab` -> copy and paste the URL")
+image_url = st.text_input("or.. enter image URL\nTo get image URL: right click on any image -> select `Open image in a new tab` -> copy and paste the URL")
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
