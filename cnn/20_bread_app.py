@@ -31,7 +31,7 @@ def get_prediction(image):
     model = load_model()
     predictions = model.predict(image)
     score = tf.nn.softmax(predictions[0])
-    predicted_class = class_names[np.argmax(score)
+    predicted_class = class_names[np.argmax(score)]
     return predicted_class, 100 * np.max(score)
 
 
