@@ -53,18 +53,19 @@ if image_url is not "":
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    st.image(image, use_column_width=True)
-    st.write("")
-    prediction = get_prediction(image)
-    prediction[0] = prediction[0].title()
-    if prediction[0] == 'Moldy':
-        color = '#800000'
-    else:
-        color = '#008080'
 
-    html_str = f"""
-    <h2 style="text-align: center;"><span style="color: #808080;">Predicted class: </span><span style="color: {color};">{prediction[0]}</span></h2>
-    <h3 style="text-align: center;"><span style="color: #808080;">Confidence level: {round(prediction[1], 1)}%</span></h3>
-    """
+st.image(image, use_column_width=True)
+st.write("")
+prediction = get_prediction(image)
+prediction[0] = prediction[0].title()
+if prediction[0] == 'Moldy':
+    color = '#800000'
+else:
+    color = '#008080'
 
-    st.markdown(html_str, unsafe_allow_html=True)
+html_str = f"""
+<h2 style="text-align: center;"><span style="color: #808080;">Predicted class: </span><span style="color: {color};">{prediction[0]}</span></h2>
+<h3 style="text-align: center;"><span style="color: #808080;">Confidence level: {round(prediction[1], 1)}%</span></h3>
+"""
+
+st.markdown(html_str, unsafe_allow_html=True)
