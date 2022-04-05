@@ -54,6 +54,11 @@ st.markdown(f""" <style>
         padding-bottom: {padding}rem;
     }} </style> """, unsafe_allow_html=True)
 
+st.markdown("""<style type="text/css">
+html {overflow: auto;}
+</style>
+""")
+
 st.markdown("<h1 style='text-align: center; color: grey;'>To eat or not to eat... 🍞 🥐 🥖</h1>", unsafe_allow_html=True)
 uploaded_file = st.file_uploader("Upload image to start!", type='jpg')
 image_url = st.text_input("or.. enter image url")
