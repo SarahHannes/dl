@@ -9,6 +9,7 @@
 - [Convolutional Neural Network](https://github.com/SarahHannes/dl#convolutional-neural-network)
   * [1.0 CIFAR10](https://github.com/SarahHannes/dl#10-cifar10--code)
   * [2.0 Bread](https://github.com/SarahHannes/dl#20-bread--code)
+- [Transfer Learning](https://github.com/SarahHannes/dl#transfer-learning)
 
 <!-- toc -->
 Feed Forward Neural Network
@@ -166,3 +167,44 @@ _________________________________________________________________
 ```
 <img src="cnn/plots/20_loss.png" width="1200" height="300">
 <img src="cnn/plots/20_accuracy.png" width="1200" height="300">
+
+Transfer Learning
+------------
+#### 1.0 VGG16 <a href="https://htmlpreview.github.io/?https://github.com/SarahHannes/dl/main/transfer_learning/10_vgg16.html"> [Code]</a>
+> Learning goal:
+> 
+> Utilize and fine tune existing pre-trained model on a different dataset.
+> - Base Model: VGG16 from <a href="https://www.tensorflow.org/api_docs/python/tf/keras/applications/vgg16">Tensorflow</a>.
+> - Dataset: Multiclass image classification dataset from <a href="https://www.kaggle.com/datasets/ayushv322/animal-classification">Kaggle</a>.
+> - `tf.keras.layers.GlobalAveragePooling2D()` and `tf.keras.layers.Dense(len(class_names), activation='softmax')` layers were added after the base model layer.
+> - Model is first fitted with frozen base model `base_model.trainable = False`; and unfreezed during fine tuning.
+> - Final validation accuracy during initial training: 0.8842; validation accuracy during fine tuning: 0.8924.
+> - Test accuracy: 0.9196.
+> - Model summary is as below.
+
+```
+Model: "model_4"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_10 (InputLayer)        [(None, 160, 160, 3)]     0         
+_________________________________________________________________
+sequential (Sequential)      (None, 160, 160, 3)       0         
+_________________________________________________________________
+tf.__operators__.getitem_4 ( (None, 160, 160, 3)       0         
+_________________________________________________________________
+tf.nn.bias_add_4 (TFOpLambda (None, 160, 160, 3)       0         
+_________________________________________________________________
+vgg16 (Functional)           (None, 5, 5, 512)         14714688  
+_________________________________________________________________
+global_average_pooling2d_5 ( (None, 512)               0         
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 512)               0         
+_________________________________________________________________
+dense_6 (Dense)              (None, 4)                 2052      
+=================================================================
+Total params: 14,716,740
+Trainable params: 2,052
+Non-trainable params: 14,714,688
+_________________________________________________________________
+```
