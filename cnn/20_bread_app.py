@@ -60,24 +60,25 @@ image_url = st.text_input("or.. enter image url")
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    st.image(image, use_column_width=True)
 elif image_url is not "":
     img_data = requests.get(image_url).content
     with open('image_name.jpg', 'wb') as handler:
         handler.write(img_data)
     image = Image.open('image_name.jpg')
+
+if uploaded_file or image_url:
     st.image(image, use_column_width=True)
-st.write("")
-prediction = get_prediction(image)
-prediction[0] = prediction[0].title()
-if prediction[0] == 'Moldy':
-    color = '#800000'
-else:
-    color = '#008080'
+    st.write("")
+    prediction = get_prediction(image)
+    prediction[0] = prediction[0].title()
+    if prediction[0] == 'Moldy':
+        color = '#800000'
+    else:
+        color = '#008080'
 
-html_str = f"""
-<h2 style="text-align: center;"><span style="color: #808080;">Predicted class: </span><span style="color: {color};">{prediction[0]}</span></h2>
-<h3 style="text-align: center;"><span style="color: #808080;">Confidence level: {round(prediction[1], 1)}%</span></h3>
-"""
+    html_str = f"""
+    <h2 style="text-align: center;"><span style="color: #808080;">Predicted class: </span><span style="color: {color};">{prediction[0]}</span></h2>
+    <h3 style="text-align: center;"><span style="color: #808080;">Confidence level: {round(prediction[1], 1)}%</span></h3>
+    """
 
-st.markdown(html_str, unsafe_allow_html=True)
+    st.markdown(html_str, unsafe_allow_html=True)
