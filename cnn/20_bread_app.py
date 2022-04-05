@@ -5,16 +5,16 @@ Created on Tue Apr  5 15:19:19 2022
 @author: Sarah
 """
 
+import os
 import streamlit as st
 import numpy as np
-import wget
 import tensorflow as tf
+import h5py
 
 # Download best model
 download_from = "https://github.com/SarahHannes/dl/raw/main/cnn/model/20_bread_weights-improvement-09-0.88.hdf5"
-download_to = "model.hdf5"
-model_path = wget.download(download_from, out = download_to)
-model = tf.keras.models.load_model(model_path)
+model_f = h5py.File(download_from, 'r')
+model = tf.keras.models.load_model(model_f)
 
 st.write('Good Bread Moldy Bread classifier 🍞🥐🥖')
 img = st.file_uploader("Upload your bread image!")
