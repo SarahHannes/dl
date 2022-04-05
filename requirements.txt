@@ -1,0 +1,7 @@
+# local package
+-e .
+
+wget
+tensorflow
+numpy
+streamlit
