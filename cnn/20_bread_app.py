@@ -55,12 +55,17 @@ st.markdown(f""" <style>
     }} </style> """, unsafe_allow_html=True)
 
 st.markdown("<h1 style='text-align: center; color: grey;'>To eat or not to eat... 🍞 🥐 🥖</h1>", unsafe_allow_html=True)
-uploaded_file = st.file_uploader("Upload image to start!", type='jpg')
-image_url = st.text_input("or.. enter image URL")
+
+col1, col2 = st.columns(2)
+with col1:
+    uploaded_file = st.file_uploader("Upload image to start!", type='jpg')
+with col2:
+    default = "https://www.abeautifulplate.com/wp-content/uploads/2020/02/artisan-sourdough-bread-recipe-1-34-500x500.jpg"
+    image_url = st.text_input("or.. enter image URL", default)
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-elif image_url is not "":
+elif image_url != default:
     img_data = requests.get(image_url).content
     with open('image_name.jpg', 'wb') as handler:
         handler.write(img_data)
