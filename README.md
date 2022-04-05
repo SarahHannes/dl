@@ -116,7 +116,7 @@ _________________________________________________________________
 >   - Model 2: Input + Batch Normalization Layer + 4 Convolutional Layers + 1 Dense Layer
 >  	- Model 3: Input + Batch Normalization Layer + 5 Convolutional Layers + 1 Dense Layer
 > - All models were trained for 10 epochs.
-> - Best accuracy score (83%) is obtained by Model 3.
+> - Best accuracy score (88%) is obtained by Model 3.
 > - Model 3 summary is as below.
 
 <img src="https://user-images.githubusercontent.com/78901374/160882501-962fa9ac-7fb1-453b-bda9-499254e17f82.png" width="500" height="150">
