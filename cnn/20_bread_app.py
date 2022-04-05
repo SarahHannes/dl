@@ -45,14 +45,14 @@ st.set_page_config(page_title='Bready', page_icon='🍴')
 st.markdown("<h1 style='text-align: center; color: grey;'>To eat or not to eat... 🍞 🥐 🥖</h1>", unsafe_allow_html=True)
 uploaded_file = st.file_uploader("Upload image to start!", type='jpg')
 image_url = st.text_input("or.. enter image url")
-if image_url is not "":
+
+if uploaded_file is not None:
+    image = Image.open(uploaded_file)
+elif image_url is not "":
     img_data = requests.get(image_url).content
     with open('image_name.jpg', 'wb') as handler:
         handler.write(img_data)
     image = Image.open('image_name.jpg')
-
-if uploaded_file is not None:
-    image = Image.open(uploaded_file)
 
 st.image(image, use_column_width=True)
 st.write("")
