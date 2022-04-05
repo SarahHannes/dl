@@ -40,7 +40,7 @@ def get_prediction(img):
 
 
 st.set_page_config(page_title='Bready', page_icon='🍴')
-st.markdown("<h1 style='text-align: center; color: grey;'>To eat or not to eat... 🍞🥐🥖</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: grey;'>To eat or not to eat... 🍞 🥐 🥖</h1>", unsafe_allow_html=True)
 uploaded_file = st.file_uploader("Upload your bread image!", type='jpg')
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
@@ -49,21 +49,15 @@ if uploaded_file is not None:
     prediction = get_prediction(image)
     prediction[0] = prediction[0].title()
     if prediction[0] == 'Moldy':
-        color = 'orange'
+        color = '#800000'
     else:
-        color = 'black'
+        color = '#008080'
 
     html_str = f"""
-    <style>
-    p.a {{
-      font: bold 40px;
-    }}
-    </style>
-    <h2 style='text-align: center; color: {color};'>
-    <p class="a">Predicted class: {prediction[0]}</p>
-    </h2>
+    <h2 style="text-align: center;"><p class="a">Predicted class: <span style="color: {color};">{prediction[0]}</span></p></h2>
+    <h3 style="text-align: center;"><span style="color: #808080;">Confidence level: {round(prediction[1], 1)}%</span></h3>
     """
+
     st.markdown(html_str, unsafe_allow_html=True)
     # st.subheader(f'Predicted class: {prediction[0]}')
-    st.markdown(f"Confidence level: {round(prediction[1], 1)} %")
-
+    # st.markdown(f"Confidence level: {round(prediction[1], 1)} %")
