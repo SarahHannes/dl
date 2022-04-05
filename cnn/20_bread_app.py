@@ -54,7 +54,7 @@ st.markdown(f""" <style>
         padding-bottom: {padding}rem;
     }} </style> """, unsafe_allow_html=True)
 
-st.markdown("""<style type="text/css">
+st.markdown("""<style>
 html {overflow: auto;}
 </style>
 """)
@@ -65,7 +65,7 @@ image_url = st.text_input("or.. enter image url")
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-elif image_url is not "":
+if image_url is not "":
     img_data = requests.get(image_url).content
     with open('image_name.jpg', 'wb') as handler:
         handler.write(img_data)
