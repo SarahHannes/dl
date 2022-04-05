@@ -1,6 +1,3 @@
-# local package
--e .
-
 h5py
 tensorflow
 numpy
