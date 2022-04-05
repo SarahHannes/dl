@@ -106,7 +106,7 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 
- #### 2.0 Bread <a href="http://htmlpreview.github.io/?https://github.com/SarahHannes/dl/blob/main/cnn/20_bread.html"> [Code]</a>
+ #### 2.0 Bread <a href="http://htmlpreview.github.io/?https://github.com/SarahHannes/dl/blob/main/cnn/20_bread.html"> [Code]</a> [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/sarahhannes/dl/main/cnn/20_bread_app.py)
 > Learning goal:
 > 
 > Create, load dataset and build CNN model for "good" and "moldy" bread image classification.
