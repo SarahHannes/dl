@@ -6,7 +6,6 @@ Created on Tue Apr  5 15:19:19 2022
 """
 
 import streamlit as st
-import imutils
 import numpy as np
 import wget
 import tensorflow as tf
