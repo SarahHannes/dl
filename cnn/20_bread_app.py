@@ -12,9 +12,13 @@ import tensorflow as tf
 import h5py
 
 # Download best model
-download_from = "https://github.com/SarahHannes/dl/raw/main/cnn/model/20_bread_weights-improvement-09-0.88.hdf5"
-model_f = h5py.File(download_from, 'r')
-model = tf.keras.models.load_model(model_f)
+# download_from = "https://github.com/SarahHannes/dl/raw/main/cnn/model/20_bread_weights-improvement-09-0.88.hdf5"
+# model_f = h5py.File(download_from, 'r')
+# model = tf.keras.models.load_model(model_f)
+current_path = os.getcwd()
+st.write('current path', current_path)
+# model_path = os.path.join(current_path, 'static\dog_breeds_category.pickle')
+
 
 st.write('Good Bread Moldy Bread classifier 🍞🥐🥖')
 img = st.file_uploader("Upload your bread image!")
