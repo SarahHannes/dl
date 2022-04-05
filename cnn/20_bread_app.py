@@ -5,6 +5,7 @@ Created on Tue Apr  5 15:19:19 2022
 @author: Sarah
 """
 
+import requests
 import os
 import streamlit as st
 import numpy as np
@@ -12,14 +13,11 @@ import tensorflow as tf
 import h5py
 
 # Download best model
-# download_from = "https://github.com/SarahHannes/dl/raw/main/cnn/model/20_bread_weights-improvement-09-0.88.hdf5"
-# model_f = h5py.File(download_from, 'r')
 
-# current_path = os.getcwd()
-# st.write('current path', current_path)
-# current_path = os.chdir("")
-# st.write('current path',  )
-model_path = os.path.dirname('cnn/model/20_bread_weights-improvement-09-0.88.hdf5')
+model_filename = "20_bread_weights-improvement-09-0.88.hdf5"
+url = "https://github.com/SarahHannes/dl/raw/e1a0ee81c43f69772842187f980694a29b8d19cc/cnn/model/" + model_filename
+r = requests.get(url)
+model_path = open(model_filename , 'wb').write(r.content)
 model = tf.keras.models.load_model(model_path)
 st.write(model.summary())
 
