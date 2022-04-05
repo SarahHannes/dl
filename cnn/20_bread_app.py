@@ -40,7 +40,7 @@ def get_prediction(img):
     return [predicted_class, 100 * np.max(score)]
 
 
-st.set_page_config(page_title='Bready', page_icon='🍴')
+st.set_page_config(page_title='Bready', layout="wide", page_icon='🍴')
 st.markdown(""" <style>
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
