@@ -56,7 +56,7 @@ if uploaded_file is not None:
     html_str = f"""
     <style>
     p.a {{
-      font: bold 15px Courier;
+      font: bold 40px;
     }}
     </style>
     <h2 style='text-align: center; color: {color};'>
