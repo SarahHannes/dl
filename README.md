@@ -1,14 +1,14 @@
 # Deep Learning
-
+<i>Work in progress</i>
 - [Feed Forward Neural Network](https://github.com/SarahHannes/dl#feed-forward-neural-network)
   * [Categorial](https://github.com/SarahHannes/dl#categorical)
-    + [1.0 Titanic Dataset](https://github.com/SarahHannes/dl#10-titanic-dataset-code)
-    + [2.0 Women Chess Dataset](https://github.com/SarahHannes/dl#20-women-chess-dataset-code)
-    + [3.0 German Credit Dataset: Overfitted Model](https://github.com/SarahHannes/dl#30-german-credit-dataset-overfitted-model-code)
-    + [4.0 German Credit Dataset: Generalized Model](https://github.com/SarahHannes/dl#40-german-credit-dataset-generalized-model-code)
+    + [1.0 Titanic Dataset](https://github.com/SarahHannes/dl#10-titanic-dataset--code)
+    + [2.0 Women Chess Dataset](https://github.com/SarahHannes/dl#20-women-chess-dataset--code)
+    + [3.0 German Credit Dataset: Overfitted Model](https://github.com/SarahHannes/dl#30-german-credit-dataset-overfitted-model--code)
+    + [4.0 German Credit Dataset: Generalized Model](https://github.com/SarahHannes/dl#40-german-credit-dataset-generalized-model--code)
 - [Convolutional Neural Network](https://github.com/SarahHannes/dl#convolutional-neural-network)
-  * [1.0 CIFAR10](https://github.com/SarahHannes/dl#10-cifar10-code)
-  * [2.0 Bread](https://github.com/SarahHannes/dl#20-bread-code)
+  * [1.0 CIFAR10](https://github.com/SarahHannes/dl#10-cifar10--code)
+  * [2.0 Bread](https://github.com/SarahHannes/dl#20-bread--code)
 
 <!-- toc -->
 Feed Forward Neural Network
@@ -104,7 +104,7 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 
- #### 2.0 Bread <a href="cnn/20_bread.ipynb"> [Code]</a>
+ #### 2.0 Bread <a href="http://htmlpreview.github.io/?https://github.com/SarahHannes/dl/blob/main/cnn/20_bread.html"> [Code]</a>
 > Learning goal:
 > 
 > Create, load dataset and build CNN model for "good" and "moldy" bread image classification.
@@ -164,4 +164,5 @@ Trainable params: 102,232
 Non-trainable params: 6
 _________________________________________________________________
 ```
-<!-- <img src="cnn/plots/30_loss.png" width="340"> <img src="feedforward/plots/30_accuracy.png" width="345"> -->
+<img src="cnn/plots/20_loss.png" width="1200" height="300">
+<img src="cnn/plots/20_accuracy.png" width="1200" height="300">
