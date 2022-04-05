@@ -21,7 +21,7 @@ def load_model():
     model = tf.keras.models.load_model(model_path)
     return model
 
-def get_prediction(image):
+def get_prediction(img):
     """
     Get class label and confidence level for user uploaded image.
     :param image: Uploaded image file
@@ -29,7 +29,9 @@ def get_prediction(image):
     """
     class_names = ['good', 'moldy']
     model = load_model()
-    predictions = model.predict(image)
+    img_array = tf.keras.utils.img_to_array(img)
+    img_array = tf.expand_dims(img_array, 0)  # Create a batch
+    predictions = model.predict(img_array)
     score = tf.nn.softmax(predictions[0])
     predicted_class = class_names[np.argmax(score)]
     return predicted_class, 100 * np.max(score)
@@ -39,13 +41,8 @@ st.write('To eat or not to eat... 🍞🥐🥖')
 uploaded_file = st.file_uploader("Upload your bread image!", type='jpg')
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    st.image(image, caption="Uploaded image", use_column_width=True)
+    st.image(image, use_column_width=True)
     st.write("")
     prediction = get_prediction(image)
     st.write(prediction[0], f"\nConfidence level: .2f{prediction[1]}")
-
-
-# st.image(image)
-# img_array = tf.keras.utils.img_to_array(image)
-# img_array = tf.expand_dims(img_array, 0)  # Create a batch
 
