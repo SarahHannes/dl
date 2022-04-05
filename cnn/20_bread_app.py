@@ -1,7 +1,6 @@
 import urllib.request
 import requests
 
-
 from PIL import Image
 import numpy as np
 import streamlit as st
@@ -42,6 +41,19 @@ def get_prediction(img):
 
 
 st.set_page_config(page_title='Bready', page_icon='🍴')
+st.markdown(""" <style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style> """, unsafe_allow_html=True)
+padding = 0
+st.markdown(f""" <style>
+    .reportview-container .main .block-container{{
+        padding-top: {padding}rem;
+        padding-right: {padding}rem;
+        padding-left: {padding}rem;
+        padding-bottom: {padding}rem;
+    }} </style> """, unsafe_allow_html=True)
+
 st.markdown("<h1 style='text-align: center; color: grey;'>To eat or not to eat... 🍞 🥐 🥖</h1>", unsafe_allow_html=True)
 uploaded_file = st.file_uploader("Upload image to start!", type='jpg')
 image_url = st.text_input("or.. enter image url")
