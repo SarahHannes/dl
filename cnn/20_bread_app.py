@@ -31,11 +31,11 @@ def get_prediction(img):
     model = load_model()
     img_array = tf.keras.utils.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0)  # Create a batch
+    img_array = tf.image.resize(img_array, [180, 180])
     predictions = model.predict(img_array)
     score = tf.nn.softmax(predictions[0])
     predicted_class = class_names[np.argmax(score)]
     return predicted_class, 100 * np.max(score)
-
 
 st.write('To eat or not to eat... 🍞🥐🥖')
 uploaded_file = st.file_uploader("Upload your bread image!", type='jpg')
