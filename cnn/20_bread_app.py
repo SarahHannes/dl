@@ -36,7 +36,7 @@ def get_prediction(img):
     predictions = model.predict(img_array)
     score = tf.nn.softmax(predictions[0])
     predicted_class = class_names[np.argmax(score)]
-    return predicted_class, 100 * np.max(score)
+    return [predicted_class, 100 * np.max(score)]
 
 
 st.set_page_config(page_title='Bready', page_icon='🍴')
@@ -47,13 +47,18 @@ if uploaded_file is not None:
     st.image(image, use_column_width=True)
     st.write("")
     prediction = get_prediction(image)
-
-    if prediction[0] == 'moldy':
+    prediction[0] = prediction[0].title()
+    if prediction[0] == 'Moldy':
         color = 'orange'
     else:
         color = 'black'
 
     html_str = f"""
+    <style>
+    p.a {{
+      font: bold 15px Courier;
+    }}
+    </style>
     <h2 style='text-align: center; color: {color};'>
     <p class="a">Predicted class: {prediction[0]}</p>
     </h2>
