@@ -21,6 +21,7 @@ def load_model():
     model = tf.keras.models.load_model(model_path)
     return model
 
+
 def get_prediction(img):
     """
     Get class label and confidence level for user uploaded image.
@@ -37,12 +38,15 @@ def get_prediction(img):
     predicted_class = class_names[np.argmax(score)]
     return predicted_class, 100 * np.max(score)
 
-st.write('To eat or not to eat... 🍞🥐🥖')
+
+st.set_page_config(page_title='Bready', page_icon='🍴')
+st.title('To eat or not to eat... 🍞🥐🥖')
 uploaded_file = st.file_uploader("Upload your bread image!", type='jpg')
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, use_column_width=True)
     st.write("")
     prediction = get_prediction(image)
-    st.write(prediction[0], f"\nConfidence level: .2f{prediction[1]}")
+    st.subheader('Predicted class: ', prediction[0])
+    st.markdown(f"Confidence level: {round(prediction[1], 1)} %")
 
