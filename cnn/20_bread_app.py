@@ -1,4 +1,6 @@
 import urllib.request
+import requests
+
 
 from PIL import Image
 import numpy as np
@@ -42,6 +44,13 @@ def get_prediction(img):
 st.set_page_config(page_title='Bready', page_icon='🍴')
 st.markdown("<h1 style='text-align: center; color: grey;'>To eat or not to eat... 🍞 🥐 🥖</h1>", unsafe_allow_html=True)
 uploaded_file = st.file_uploader("Upload image to start!", type='jpg')
+image_url = st.text_input("or.. enter image url")
+if image_url is not None:
+    img_data = requests.get(image_url).content
+    with open('image_name.jpg', 'wb') as handler:
+        handler.write(img_data)
+    image = Image.open('image_name.jpg')
+
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, use_column_width=True)
@@ -54,7 +63,7 @@ if uploaded_file is not None:
         color = '#008080'
 
     html_str = f"""
-    <h2 style="text-align: center;">Predicted class: <span style="color: {color};">{prediction[0]}</span></h2>
+    <h2 style="text-align: center;"><span style="color: #808080;">Predicted class: </span><span style="color: {color};">{prediction[0]}</span></h2>
     <h3 style="text-align: center;"><span style="color: #808080;">Confidence level: {round(prediction[1], 1)}%</span></h3>
     """
 
