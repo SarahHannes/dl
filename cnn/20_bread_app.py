@@ -18,7 +18,7 @@ model_filename = "20_bread_weights-improvement-09-0.88.hdf5"
 url = "https://github.com/SarahHannes/dl/raw/e1a0ee81c43f69772842187f980694a29b8d19cc/cnn/model/" + model_filename
 r = requests.get(url)
 model_path = open(model_filename , 'wb').write(r.content)
-model = tf.keras.models.load_model(model_path)
+model = tf.keras.models.load_model(url)
 st.write(model.summary())
 
 st.write('Good Bread Moldy Bread classifier 🍞🥐🥖')
