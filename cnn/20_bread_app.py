@@ -1,7 +1,6 @@
-import os
 import urllib.request
 
-from PIL import Image, ImageOps
+from PIL import Image
 import numpy as np
 import streamlit as st
 import tensorflow as tf
