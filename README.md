@@ -8,7 +8,7 @@
     + [4.0 German Credit Dataset: Generalized Model](https://github.com/SarahHannes/dl#40-german-credit-dataset-generalized-model-code)
 - [Convolutional Neural Network](https://github.com/SarahHannes/dl#convolutional-neural-network)
   * [1.0 CIFAR10](https://github.com/SarahHannes/dl#10-cifar10-code)
-  * [2.0 Bread](https://github.com/SarahHannes/dl#20-bread-code)
+  * [2.0 Bread](https://github.com/SarahHannes/dl#20-bread--code)
 
 <!-- toc -->
 Feed Forward Neural Network
