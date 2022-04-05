@@ -17,7 +17,7 @@ import urllib.request
 
 urllib.request.urlretrieve(
         'https://github.com/SarahHannes/dl/raw/e1a0ee81c43f69772842187f980694a29b8d19cc/cnn/model/20_bread_weights-improvement-09-0.88.hdf5', 'model.hdf5')
-MODEL_PATH = './model.h5'
+MODEL_PATH = './model.hdf5'
 
 # model_filename = "20_bread_weights-improvement-09-0.88.hdf5"
 # url = "https://github.com/SarahHannes/dl/raw/e1a0ee81c43f69772842187f980694a29b8d19cc/cnn/model/" + model_filename
