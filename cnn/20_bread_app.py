@@ -54,27 +54,19 @@ st.markdown(f""" <style>
         padding-bottom: {padding}rem;
     }} </style> """, unsafe_allow_html=True)
 
-st.markdown("""
-<style>
-  div {
-    overflow: hidden;
-  }
-<style>
-""")
-
 st.markdown("<h1 style='text-align: center; color: grey;'>To eat or not to eat... 🍞 🥐 🥖</h1>", unsafe_allow_html=True)
 uploaded_file = st.file_uploader("Upload image to start!", type='jpg')
 image_url = st.text_input("or.. enter image url")
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
+    st.image(image, use_column_width=True)
 elif image_url is not "":
     img_data = requests.get(image_url).content
     with open('image_name.jpg', 'wb') as handler:
         handler.write(img_data)
     image = Image.open('image_name.jpg')
-
-st.image(image, use_column_width=True)
+    st.image(image, use_column_width=True)
 st.write("")
 prediction = get_prediction(image)
 prediction[0] = prediction[0].title()
