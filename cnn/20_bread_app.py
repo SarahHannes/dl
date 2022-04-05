@@ -13,12 +13,17 @@ import tensorflow as tf
 import h5py
 
 # Download best model
+import urllib.request
 
-model_filename = "20_bread_weights-improvement-09-0.88.hdf5"
-url = "https://github.com/SarahHannes/dl/raw/e1a0ee81c43f69772842187f980694a29b8d19cc/cnn/model/" + model_filename
-r = requests.get(url)
-model_path = open(model_filename , 'wb').write(r.content)
-model = tf.keras.models.load_model(url)
+urllib.request.urlretrieve(
+        'https://github.com/SarahHannes/dl/raw/e1a0ee81c43f69772842187f980694a29b8d19cc/cnn/model/20_bread_weights-improvement-09-0.88.hdf5', 'model.hdf5')
+MODEL_PATH = './model.h5'
+
+# model_filename = "20_bread_weights-improvement-09-0.88.hdf5"
+# url = "https://github.com/SarahHannes/dl/raw/e1a0ee81c43f69772842187f980694a29b8d19cc/cnn/model/" + model_filename
+# r = requests.get(url)
+# model_path = open(model_filename , 'wb').write(r.content)
+model = tf.keras.models.load_model(MODEL_PATH)
 st.write(model.summary())
 
 st.write('Good Bread Moldy Bread classifier 🍞🥐🥖')
