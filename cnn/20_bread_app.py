@@ -40,6 +40,7 @@ def get_prediction(img):
 
 
 st.set_page_config(page_title='Bready', page_icon='🍴')
+st.markdown("<h1 style='text-align: center; color: grey;'>To eat or not to eat... 🍞🥐🥖</h1>", unsafe_allow_html=True)
 st.title('To eat or not to eat... 🍞🥐🥖')
 uploaded_file = st.file_uploader("Upload your bread image!", type='jpg')
 if uploaded_file is not None:
@@ -47,6 +48,6 @@ if uploaded_file is not None:
     st.image(image, use_column_width=True)
     st.write("")
     prediction = get_prediction(image)
-    st.subheader('Predicted class: ', prediction[0])
+    st.subheader(f'Predicted class: {prediction[0]}')
     st.markdown(f"Confidence level: {round(prediction[1], 1)} %")
 
