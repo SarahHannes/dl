@@ -44,7 +44,7 @@ st.set_page_config(page_title='Bready', page_icon='🍴')
 st.markdown(""" <style>
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
-
+#element {scrollbar-width: none;}
 </style> """, unsafe_allow_html=True)
 padding = -1
 st.markdown(f""" <style>
