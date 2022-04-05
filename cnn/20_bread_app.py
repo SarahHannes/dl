@@ -15,9 +15,11 @@ import h5py
 # download_from = "https://github.com/SarahHannes/dl/raw/main/cnn/model/20_bread_weights-improvement-09-0.88.hdf5"
 # model_f = h5py.File(download_from, 'r')
 
-current_path = os.getcwd()
-st.write('current path', current_path)
-model_path = os.path.join(current_path, 'cnn/model/20_bread_weights-improvement-09-0.88.hdf5')
+# current_path = os.getcwd()
+# st.write('current path', current_path)
+# current_path = os.chdir("")
+# st.write('current path',  )
+model_path = os.path.dirname('cnn/model/20_bread_weights-improvement-09-0.88.hdf5')
 model = tf.keras.models.load_model(model_path)
 st.write(model.summary())
 
