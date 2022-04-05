@@ -19,7 +19,7 @@ current_path = os.getcwd()
 st.write('current path', current_path)
 model_path = os.path.join(current_path, 'cnn/model/20_bread_weights-improvement-09-0.88.hdf5')
 model = tf.keras.models.load_model(model_path)
-st.write(model.summary)
+st.write(model.summary())
 
 st.write('Good Bread Moldy Bread classifier 🍞🥐🥖')
 img = st.file_uploader("Upload your bread image!")
