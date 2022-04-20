@@ -1,11 +1,11 @@
 # Deep Learning
 <i>Work in progress</i>
 - [Feed Forward Neural Network](https://github.com/SarahHannes/dl#feed-forward-neural-network)
-  * [Categorial](https://github.com/SarahHannes/dl#categorical)
+  * [Classification](https://github.com/SarahHannes/dl#classification)
     + [1.0 Titanic Dataset](https://github.com/SarahHannes/dl#10-titanic-dataset--code)
     + [2.0 Women Chess Dataset](https://github.com/SarahHannes/dl#20-women-chess-dataset--code)
     + [3.0 German Credit Dataset: Overfitted Model](https://github.com/SarahHannes/dl#30-german-credit-dataset-overfitted-model--code)
-    + [4.0 German Credit Dataset: Generalized Model](https://github.com/SarahHannes/dl#40-german-credit-dataset-generalized-model--code)
+<!--     + [4.0 German Credit Dataset: Generalized Model](https://github.com/SarahHannes/dl#40-german-credit-dataset-generalized-model--code) -->
 - [Convolutional Neural Network](https://github.com/SarahHannes/dl#convolutional-neural-network)
   * [1.0 CIFAR10](https://github.com/SarahHannes/dl#10-cifar10--code)
   * [2.0 Bread](https://github.com/SarahHannes/dl#20-bread--code-)
@@ -15,7 +15,7 @@
 <!-- toc -->
 Feed Forward Neural Network
 ------------
-### Categorical
+### Classification
 #### 1.0 Titanic Dataset <a href="feedforward/10_categorical_Titanic.py">[Code]</a>
 <img src="feedforward/plots/10_loss.png" width="350"> <img src="feedforward/plots/10_accuracy.png" width="345">
 
