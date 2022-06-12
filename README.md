@@ -11,6 +11,7 @@
   * [2.0 Bread](https://github.com/SarahHannes/dl#20-bread--code-)
 - [Recurrent Neural Network](https://github.com/SarahHannes/dl#recurrent-neural-network)
   * [1.0 Text Generation](https://github.com/SarahHannes/dl#10-text-generation--code)
+  * [2.0 Text Classification](https://github.com/SarahHannes/dl#10-text-classification--code)
 - [Transfer Learning](https://github.com/SarahHannes/dl#transfer-learning)
   * [1.0 VGG16](https://github.com/SarahHannes/dl#10-vgg16--code)
 
@@ -175,6 +176,7 @@ Recurrent Neural Network
 ------------
 #### 1.0 Text Generation <a href="https://htmlpreview.github.io/?https://github.com/SarahHannes/dl/main/rnn/10_text_generation.html"> [Code]</a>
 > Learning goal:
+> 
 > Create a text generation model using LSTM. Several LSTM architecture were explored and the best model can be observed in the model summary below and in the attached <a href="https://htmlpreview.github.io/?https://github.com/SarahHannes/dl/main/rnn/10_text_generation.html">[code]</a>
 > - Dataset: Peter Pan <a href="https://www.gutenberg.org/ebooks/16">[Source]</a>
 > - Model Architecture: 3 stacked LSTM Layers with 0.1 Dropout
@@ -201,6 +203,38 @@ dense (Dense)                (None, 34)                8704
 =================================================================
 Total params: 1,313,284
 Trainable params: 1,313,284
+Non-trainable params: 0
+_________________________________________________________________
+```
+
+#### 2.0 Text Classification <a href="https://htmlpreview.github.io/?https://github.com/SarahHannes/dl/main/rnn/20_text_classification.html"> [Code]</a>
+> Learning goal:
+> 
+> Classify intents from text input into 4 categories [BookRestaurant, GetWeather, PlayMusic, RateBook]. In order for chatbot to be able to give appropriate response, it needs to first correctly classify user intends. Therefore, intent classification model usually implemented as the first stacked model in most of all chatbot model.
+> - Preprocessing Method: 5 models were built to investigate 5 different preprocessing methods (all utilizing the same model architecture - which can be observed below)
+>    - `ori` : Training set with original input
+>    - `norm` : Training set with normalized input
+>    - `norm_lemma` : Training set with normalized + lemmatized input
+>    - `norm_stem` : Training set with normalized + stemmed input
+>    - `norm_stopword` : Training set with normalized + stopwords removal input
+> - Interestingly, all models achieved 99% accuracy after 2nd epoch. This is possibly because of the limited size of the dataset.
+
+```
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding (Embedding)       (None, 1186, 32)          240704    
+                                                                 
+ lstm (LSTM)                 (None, 100)               53200     
+                                                                 
+ dropout (Dropout)           (None, 100)               0         
+                                                                 
+ dense (Dense)               (None, 4)                 404       
+                                                                 
+=================================================================
+Total params: 294,308
+Trainable params: 294,308
 Non-trainable params: 0
 _________________________________________________________________
 ```
