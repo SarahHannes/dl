@@ -184,7 +184,7 @@ Recurrent Neural Network
 >    - Normalization (rescaling the encoded value to the range of 0 to 1)
 > - Best accuracy score obtained was 71%.
 > - Possible improvement:
->    - 
+>    - Currently the model produces repetitive and gibberish text output. Possible improvement would be to reduce model complexity and reduce learning rate.
 
 ```
 Model: "sequential"
