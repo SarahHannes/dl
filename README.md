@@ -175,6 +175,35 @@ Recurrent Neural Network
 ------------
 #### 1.0 Text Generation <a href="https://htmlpreview.github.io/?https://github.com/SarahHannes/dl/main/rnn/10_text_generation.html"> [Code]</a>
 > Learning goal:
+> Create a text generation model using LSTM. Several LSTM architecture were explored and the best model can be observed in the model summary below and in the attached <a href="https://htmlpreview.github.io/?https://github.com/SarahHannes/dl/main/rnn/10_text_generation.html">[code]</a>
+> - Dataset: Peter Pan <a href="https://www.gutenberg.org/ebooks/16">[Source]</a>
+> - Model Architecture: 3 stacked LSTM Layers with 0.1 Dropout
+> - Preprocessing techniques:
+>    - Remove special characters and whitespaces
+>    - Encoding characters to numerical representation
+>    - Normalization (rescaling the encoded value to the range of 0 to 1)
+> - Best accuracy score obtained was 71%.
+> - Possible improvement:
+>    - Currently the model produces repetitive and gibberish text output. Possible improvement would be to reduce model complexity and reduce learning rate.
+
+```
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+lstm (LSTM)                  (None, 200, 255)          262140    
+_________________________________________________________________
+lstm_1 (LSTM)                (None, 200, 255)          521220    
+_________________________________________________________________
+lstm_2 (LSTM)                (None, 255)               521220    
+_________________________________________________________________
+dense (Dense)                (None, 34)                8704      
+=================================================================
+Total params: 1,313,284
+Trainable params: 1,313,284
+Non-trainable params: 0
+_________________________________________________________________
+```
 
 Transfer Learning
 ------------
