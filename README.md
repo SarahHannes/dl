@@ -9,6 +9,8 @@
 - [Convolutional Neural Network](https://github.com/SarahHannes/dl#convolutional-neural-network)
   * [1.0 CIFAR10](https://github.com/SarahHannes/dl#10-cifar10--code)
   * [2.0 Bread](https://github.com/SarahHannes/dl#20-bread--code-)
+- [Recurrent Neural Network](https://github.com/SarahHannes/dl#recurrent-neural-network)
+  * [1.0 Text Generation](https://github.com/SarahHannes/dl#10-text-generation--code)
 - [Transfer Learning](https://github.com/SarahHannes/dl#transfer-learning)
   * [1.0 VGG16](https://github.com/SarahHannes/dl#10-vgg16--code)
 
@@ -168,6 +170,11 @@ _________________________________________________________________
 ```
 <img src="cnn/plots/20_loss.png" width="1200" height="300">
 <img src="cnn/plots/20_accuracy.png" width="1200" height="300">
+
+Recurrent Neural Network
+------------
+#### 1.0 Text Generation <a href="https://htmlpreview.github.io/?https://github.com/SarahHannes/dl/main/rnn/10_text_generation.html"> [Code]</a>
+> Learning goal:
 
 Transfer Learning
 ------------
