@@ -11,7 +11,7 @@
   * [2.0 Bread](https://github.com/SarahHannes/dl#20-bread--code-)
 - [Recurrent Neural Network](https://github.com/SarahHannes/dl#recurrent-neural-network)
   * [1.0 Text Generation](https://github.com/SarahHannes/dl#10-text-generation--code)
-  * [2.0 Text Classification](https://github.com/SarahHannes/dl#10-text-classification--code)
+  * [2.0 Text Classification](https://github.com/SarahHannes/dl#20-text-classification--code)
 - [Transfer Learning](https://github.com/SarahHannes/dl#transfer-learning)
   * [1.0 VGG16](https://github.com/SarahHannes/dl#10-vgg16--code)
 
